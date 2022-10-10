@@ -1,0 +1,65 @@
+.offer-container {
+    position: relative;
+
+    h6 {
+        color: $white;
+        letter-spacing: 0.5em;
+        font-size: 12px;
+        text-align: center;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        top: 75px;
+    }
+}
+
+.offer-slide {
+    background: url(/img/slide-bg.jpg) center/cover no-repeat;
+    padding: 105px 0 95px;
+}
+
+.offer-slide-container {
+    @include flex(space-between, center);
+}
+
+.offer-text {
+    color: $white;
+    text-align: center;
+    width: 50%;
+    max-width: 600px;
+    padding-left: 30px;
+}
+
+.offer-img {
+    width: 50%;
+    max-width: 500px;
+    position: relative;
+    text-align: right;
+
+    .circle {
+        left: 0;
+        transform: translate(-40%, -50%);
+    }
+}
+
+.offer-pagintaion {
+    @include flex(center, center);
+    position: absolute;
+    width: 100%;
+    bottom: 45px;
+    z-index: 2;
+}
+
+.swiper-pagination-bullets {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    margin: 0 10px;
+    transition: 0.3s;
+
+    &:hover {
+        background: $white;
+    }
+}
