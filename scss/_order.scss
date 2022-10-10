@@ -1,0 +1,111 @@
+.order {
+    padding-top: 100px;
+    padding-bottom: 45px;
+}
+
+.order-container {
+    @include flex(space-between, center);
+}
+
+.order-text {
+    width: 50%;
+    max-width: 565px;
+    text-align: center;
+    color: black;
+}
+
+.order-form {
+    @include flex(space-between, center);
+
+    input {
+        width: calc(50% - 5px);
+        margin-bottom: 10px;
+        border-radius: 5px;
+        background: $grey;
+        border: 1px solid transparent;
+        outline: none;
+        height: 60px;
+        padding: 0 20px;
+        font-size: 14px;
+
+        &::placeholder {
+            color: $grey-opacity;
+        }
+
+        &:focus {
+            border: 1px solid $yellow;
+        }
+    }
+
+    button {
+        width: 100%;
+        background: $yellow;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 12px;
+        color: $white;
+        border-radius: 5px;
+        height: 60px;
+        text-transform: uppercase;
+        transition: 0.3s;
+
+        &:hover {
+            background: darken($yellow, 10%);
+        }
+    }
+}
+
+.order-select {
+    width: calc(50% - 5px);
+    margin-bottom: 10px;
+    position: relative;
+
+    &::after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: url(/img/svg/select-arrow.svg) center no-repeat;
+        position: absolute;
+        right: 10px;
+        top: calc(50% - 10px);
+        pointer-events: none;
+    }
+
+    select {
+        width: 100%;
+        background: $grey;
+        border: 1px solid transparent;
+        height: 60px;
+        padding: 0 20px;
+        font-size: 14px;
+        outline: none;
+        border-radius: 5px;
+        appearance: none;
+        color: $grey-opacity;
+    }
+}
+
+.order-img {
+    width: 50%;
+    max-width: 500px;
+    position: relative;
+
+    .circle {
+        right: 0;
+        transform: translate(40%, -50%);
+    }
+}
+
+.order-contacts {
+    font-size: 12px;
+    line-height: 12px;
+    color: $grey-opacity;
+    text-align: center;
+    padding-top: 45px;
+
+    a {
+        color: $grey-opacity;
+        font-weight: bold;
+    }
+}
