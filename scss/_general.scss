@@ -8,8 +8,8 @@ $white-opacity: rgba(255, 255, 255, 0.5);
 $yellow: #E8C300;
 $color: #0000;
 
-$wrap: 1470px;
-$container: 1200px;
+$wrap: 1440px;
+$container: 1230px;
 
 $mc: 0 auto;
 
@@ -42,15 +42,44 @@ body {
 .wrapper {
     max-width: $wrap;
     margin: $mc;
-    padding: 0 15px;
 }
 
 .container {
     max-width: $container;
     margin: $mc;
+    padding: 0 15px;
 }
 
 svg {
     width: 100%;
     height: 100%;
+}
+
+.circle {
+    width: 250px;
+    height: 250px;
+    border: 20px solid $yellow;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    filter: drop-shadow(0px 0px 100px rgba(0, 0, 0, 0.5));
+}
+
+section h2 {
+    font-family: $kurale;
+    font-weight: normal;
+    font-size: 42px;
+
+    &::after {
+        @include line;
+    }
+}
+
+section p {
+    line-height: 175%;
+    margin-bottom: 25px;
+}
+
+.intro {
+    font-weight: bold;
 }
