@@ -14,7 +14,7 @@
 }
 
 .offer-slide {
-    background: url(/img/slide-bg.jpg) center/cover no-repeat;
+    background: url(/img/slide-bg.jpg) center no-repeat;
     padding: 105px 0 95px;
 }
 
@@ -42,7 +42,7 @@
     }
 }
 
-.offer-pagintaion {
+.offer-pagination {
     @include flex(center, center);
     position: absolute;
     width: 100%;
@@ -50,16 +50,20 @@
     z-index: 2;
 }
 
-.swiper-pagination-bullets {
+.swiper-pagination-bullet {
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.5);
     cursor: pointer;
-    margin: 0 10px;
+    margin: 30px 10px;
     transition: 0.3s;
 
     &:hover {
         background: $white;
     }
+}
+
+.swiper-pagination-bullet-active {
+    background: $white;
 }

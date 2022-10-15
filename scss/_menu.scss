@@ -1,0 +1,139 @@
+.menu {
+    padding: 70px 0 75px;
+
+    h2 {
+        text-align: center;
+    }
+
+    &-intro {
+        max-width: 565px;
+        margin: $mc;
+        text-align: center;
+    }
+}
+
+.tabs-container {
+    margin: 45px auto 55px;
+    position: relative;
+    height: 60px;
+    max-width: $container;
+    overflow-y: hidden;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        height: 8px;
+        background: $tabs;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $yellow;
+    }
+}
+
+.tabs {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    @include flex (center, center);
+    flex-wrap: nowrap;
+
+    &-item {
+        min-width: 163px;
+        cursor: pointer;
+        padding: 0 10px;
+        transition: 0.3s;
+        font-size: 12px;
+        font-weight: bold;
+        color: $tabs;
+        height: 47px;
+        text-transform: uppercase;
+        @include flex (center, center);
+        border-right: 1px solid $tabs-opacity;
+
+        &:hover,
+        &:active {
+            background: $yellow;
+        }
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    &.overflow {
+        left: 0;
+        transform: 0;
+    }
+}
+
+.menu-sliders {
+    position: relative;
+    max-width: $container;
+    outline: 1px solid red;
+    margin: $mc;
+    overflow: hidden;
+    height: 500px;
+}
+
+.menu-slider {
+    height: 100%;
+}
+
+.menu-slider-block {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: 1s;
+
+    &.show {
+        opacity: 1;
+        z-index: 2;
+    }
+}
+
+.menu-item {
+    max-width: 510px;
+    @include flex(space-between, center);
+    outline: 1px solid red;
+
+    &-img {
+        width: 260px;
+        height: 170px;
+        object-fit: cover;
+        border: 4px solid $yellow;
+    }
+
+    &-text {
+        max-width: 220px;
+        margin-left: 25px;
+    }
+}
+
+.menu-title,
+.menu-price {
+    font-family: $kurale;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: $tabs;
+    font-weight: 400;
+}
+
+.menu-title {
+    display: inline-block;
+    border-bottom: 1px solid $tabs;
+}
+
+.menu-desc {
+    font-size: 11px;
+    line-height: 14px;
+    color: $grey-opacity;
+    margin-top: 24px;
+}
+
+.menu-slider .swiper-slide {
+    outline: 1px solid red;
+    height: 175px;
+    margin-bottom: 55px;
+}
