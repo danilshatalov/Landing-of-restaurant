@@ -9,8 +9,10 @@ const swiper = new Swiper('.offer-slider', {
 
 
 const swiperMenu = new Swiper('.menu-slider', {
+    grid: {
+        rows: 2,
+    },
     slidesPerView: 2,
-    slidesPerColum: 2,
     speed: 1000,
     pagination: {
         el: '.swiper-pagination',
