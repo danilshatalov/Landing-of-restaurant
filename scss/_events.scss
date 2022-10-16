@@ -1,0 +1,68 @@
+.events {
+    background: url(/img/events-bg.jpg) center no-repeat;
+    padding: 10px 0;
+
+    h6 {
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.5em;
+        font-size: 12px;
+        color: $white;
+        padding-top: 20px
+    }
+}
+
+.events-container {
+    @include flex(space-between, center);
+    margin: 45px auto;
+}
+
+.left-event {
+    position: relative;
+
+    .circle {
+        left: 0;
+        transform: translate(-40%, -50%);
+    }
+
+    .event-title {
+        right: 0;
+    }
+}
+
+.right-event {
+    position: relative;
+
+    .circle {
+        right: 0;
+        transform: translate(40%, -50%);
+    }
+
+    .event-title {
+        left: 0;
+        transform: scale(-1);
+    }
+}
+
+.event-title {
+    background: $color;
+    border-radius: 0px 5px 5px 0px;
+    font-size: 24px;
+    font-family: $kurale;
+    color: $white;
+    text-transform: uppercase;
+    padding: 30px 20px;
+    writing-mode: vertical-rl;
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+
+.events-contacts,
+.events-contacts a {
+    font-size: 12px;
+    line-height: 12px;
+    color: $white-opacity;
+    text-align: center;
+    padding-bottom: 15px;
+}

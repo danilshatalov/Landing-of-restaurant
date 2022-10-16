@@ -1,5 +1,5 @@
 .menu {
-    padding: 70px 0 75px;
+    padding: 70px 0 65px;
 
     h2 {
         text-align: center;
@@ -68,10 +68,10 @@
 
 .menu-sliders {
     position: relative;
-    max-width: $container;
+    max-width: 1400px;
     margin: $mc;
     overflow: hidden;
-    height: 500px;
+    height: 460px;
 }
 
 .menu-slider {
@@ -133,4 +133,29 @@
 .menu-slider .swiper-slide {
     height: 175px;
     margin-bottom: 55px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-pagination {
+    @include flex(center, center);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 2;
+
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $grey-opacity;
+        cursor: pointer;
+        margin: 30px 10px;
+        transition: 0.3s;
+
+        &:hover,
+        &-active {
+            background: $yellow;
+        }
+    }
 }

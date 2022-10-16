@@ -13,7 +13,7 @@ const swiperMenu = new Swiper('.menu-slider', {
         rows: 2,
     },
     slidesPerView: 2,
-    speed: 1000,
+    speed: 500,
     pagination: {
         el: '.swiper-pagination',
         clickable: true,

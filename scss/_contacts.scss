@@ -1,0 +1,119 @@
+.contacts {
+    padding: 50px 0 90px;
+
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &-intro {
+        text-align: center;
+        max-width: 520px;
+        margin: $mc;
+        margin-bottom: 40px;
+    }
+}
+
+.contacts-form {
+    @include flex(center, center);
+
+    input,
+    textarea {
+        width: calc(33.333% - 16px);
+        margin: 0 8px 16px;
+        height: 60px;
+        border-radius: 5px;
+        background: $grey;
+        border: none;
+        padding: 0 20px;
+        font-size: 14px;
+        outline: none;
+        color: $color;
+        border: 1px solid transparent;
+
+        &::placeholder {
+            color: $grey-opacity;
+        }
+
+        &:focus {
+            border: 1px solid $yellow;
+        }
+    }
+
+    textarea {
+        width: 100%;
+        height: 120px;
+        padding: 20px;
+        resize: none;
+    }
+}
+
+.contacts-data-submit {
+    @include flex(space-between, center);
+    width: 100%;
+    padding: 0 8px;
+
+    button {
+        width: 50%;
+        max-width: 580px;
+        background: $yellow;
+        text-transform: uppercase;
+        height: 60px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        color: $white;
+        font-size: 12px;
+        font-weight: bold;
+        transition: 3s;
+
+        &:hover {
+            background: darken($yellow, 10%);
+        }
+
+    }
+}
+
+.contacts-data {
+    @include flex(felx-start, center);
+}
+
+.contacts-data-item {
+    @include flex(felx-start, center);
+    color: $grey-opacity;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 20px;
+
+    a {
+        color: $grey-opacity;
+    }
+
+    img {
+        width: 14px;
+        height: 16px;
+        margin-right: 5px;
+    }
+}
+
+.map-container {
+    height: 475px;
+}
+
+.map {
+    width: 100%;
+    height: 475px;
+
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    padding: 10px;
+    color: $white-opacity;
+    font-size: 12px;
+}
