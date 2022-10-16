@@ -69,7 +69,6 @@
 .menu-sliders {
     position: relative;
     max-width: $container;
-    outline: 1px solid red;
     margin: $mc;
     overflow: hidden;
     height: 500px;
@@ -96,7 +95,6 @@
 .menu-item {
     max-width: 510px;
     @include flex(space-between, center);
-    outline: 1px solid red;
 
     &-img {
         width: 260px;
@@ -133,7 +131,6 @@
 }
 
 .menu-slider .swiper-slide {
-    outline: 1px solid red;
     height: 175px;
     margin-bottom: 55px;
 }
